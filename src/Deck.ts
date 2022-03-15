@@ -4,12 +4,18 @@ class Deck {
     cards: Array<Card> = [];
 
     constructor() {
+        this.createDeck();
+    }
+
+    createDeck() {
+        this.cards = [];
         Object.values(CardSuit).forEach(suit => {
             Object.values(CardRank).forEach(rank => {
                 const card = new Card(suit, rank);
                 this.cards.push(card);
             });
         });
+        this.shuffleDeck();
     }
 
     printDeck() {
@@ -29,6 +35,15 @@ class Deck {
 
     drawCard(): Card | undefined {
         return this.cards.pop();
+    }
+
+    replenishDeck(): boolean {
+        if (this.cards.length < 26) {
+            this.createDeck();
+            return true;
+        }
+
+        return false;
     }
 }
 

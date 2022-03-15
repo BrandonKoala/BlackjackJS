@@ -32,6 +32,10 @@ class Hand {
 
         return score;
     }
+
+    reset() {
+        this.cards = [];
+    }
 }
 
 export {Hand};
