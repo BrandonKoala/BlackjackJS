@@ -1,0 +1,30 @@
+{
+  "name": "blackjackjs",
+  "version": "1.0.0",
+  "description": "Text Based Blackjack Game",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrandonKoala/BlackjackJS.git"
+  },
+  "keywords": [
+    "Blackjack",
+    "Node",
+    "NPM",
+    "JavaScript"
+  ],
+  "author": "BrandonKoala",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BrandonKoala/BlackjackJS/issues"
+  },
+  "homepage": "https://github.com/BrandonKoala/BlackjackJS#readme",
+  "devDependencies": {
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  }
+}
