@@ -35,11 +35,12 @@ class Player {
             return false;
         }
 
+        this.currentBet = bet;
         return true;
     }
 
     doubleBet(): boolean {
-        if (this.money > this.currentBet * 2) {
+        if (this.money >= this.currentBet * 2) {
             this.currentBet *= 2;
             return true;
         }

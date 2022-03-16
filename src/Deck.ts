@@ -33,7 +33,17 @@ class Deck {
         }
     }
 
-    drawCard(): Card | undefined {
+    drawCard(count?: number): Array<Card> | Card | undefined {
+        if (count) {
+            const cardArray: Array<Card> = [];
+            for(let i = 0; i < count; i++) {
+                let card = this.cards.pop();
+                if (card) {
+                    cardArray.push(card);
+                }
+            }
+            return cardArray;
+        }
         return this.cards.pop();
     }
 

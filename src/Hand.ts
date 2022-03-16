@@ -3,8 +3,15 @@ import { Card, CardRank } from "./Card";
 class Hand {
     cards: Array<Card> = [];
 
-    addCard(card?: Card) {
+    addCard(card?: Card | Array<Card>) {
         if (!card) return;
+
+        if (Array.isArray(card)) {
+            card.forEach(c => {
+                this.cards.push(c);
+            });
+            return;
+        }
 
         this.cards.push(card);
     }
@@ -35,6 +42,10 @@ class Hand {
 
     reset() {
         this.cards = [];
+    }
+
+    printHand() {
+        return `${this.cards.map(c => c.printCard()).join(', ')}`
     }
 }
 

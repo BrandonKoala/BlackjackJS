@@ -40,7 +40,7 @@ class Card {
         }
 
         if (this.rank === CardRank.Ace) {
-            if (score && score > 11) {
+            if (score && score > 10) {
                 return 1;
             }
 
